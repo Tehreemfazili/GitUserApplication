@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_8">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8"
+            android:text="@string/repository_details"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/title_repo_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_repo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Id : "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/id"
+        app:layout_constraintTop_toBottomOf="@id/description_title" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/id_title"
+        app:layout_constraintTop_toBottomOf="@id/description_title" />
+
+
+    <TextView
+        android:id="@+id/name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:textColor="@color/blue"
+        android:text="Repository Name : "
+        app:layout_constraintEnd_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/id" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/name_title"
+        app:layout_constraintTop_toBottomOf="@id/id" />
+
+    <TextView
+        android:id="@+id/url_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:textColor="@color/blue"
+        android:text="Git Url : "
+        app:layout_constraintEnd_toStartOf="@id/url"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/url_title"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/owner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Owner : "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/owner"
+        app:layout_constraintTop_toBottomOf="@id/url" />
+
+    <TextView
+        android:id="@+id/owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/owner_title"
+        app:layout_constraintTop_toBottomOf="@id/url" />
+
+    <TextView
+        android:id="@+id/description_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/fullname"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/description"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_8"
+        app:layout_constraintStart_toEndOf="@id/description_title"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout" />
+
+
+
+    <TextView
+        android:id="@+id/type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Type : "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/type"
+        app:layout_constraintTop_toBottomOf="@id/owner" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        app:layout_constraintStart_toEndOf="@id/type_title"
+        app:layout_constraintTop_toBottomOf="@id/owner" />
+
+    <TextView
+        android:id="@+id/downloads_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Has Downloads : "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/downloads"
+        app:layout_constraintTop_toBottomOf="@id/type" />
+
+    <TextView
+        android:id="@+id/downloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/downloads_title"
+        app:layout_constraintTop_toBottomOf="@id/type" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        app:layout_constraintStart_toEndOf="@id/size_title"
+        app:layout_constraintTop_toBottomOf="@id/downloads" />
+
+    <TextView
+        android:id="@+id/size_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Size :  "
+
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/size"
+        app:layout_constraintTop_toBottomOf="@id/downloads" />
+
+    <TextView
+        android:id="@+id/open_issues_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Open Issues : "
+        android:textColor="@color/blue"
+
+        app:layout_constraintEnd_toStartOf="@id/open_issues"
+        app:layout_constraintTop_toBottomOf="@id/size" />
+
+
+    <TextView
+        android:id="@+id/open_issues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/open_issues_title"
+        app:layout_constraintTop_toBottomOf="@id/size" />
+
+    <TextView
+        android:id="@+id/subscribers_count_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Open Issues : "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/subscribers_count"
+        app:layout_constraintTop_toBottomOf="@id/open_issues" />
+
+
+    <TextView
+        android:id="@+id/subscribers_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/subscribers_count_title"
+        app:layout_constraintTop_toBottomOf="@id/open_issues" />
+
+    <TextView
+        android:id="@+id/subscription_url_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8"
+        android:text="Subscription Url : "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/subscription_url"
+        app:layout_constraintTop_toBottomOf="@id/subscribers_count" />
+
+
+    <TextView
+        android:id="@+id/subscription_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_8"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/subscription_url_title"
+        app:layout_constraintTop_toBottomOf="@id/subscribers_count" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="130dp"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        android:padding="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_8"
+        app:layout_constraintTop_toBottomOf="@id/subscription_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
